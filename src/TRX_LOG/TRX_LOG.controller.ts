@@ -8,11 +8,6 @@ import { Trx_LogService } from './TRX_LOG.service';
 export class Trx_LogController {
   constructor(private readonly trx_logService: Trx_LogService) {}
 
-  // @Post()
-  // async create(@Body() createTrx_Log: CreditConsultingDto) {
-  //   console.log(createTrx_Log)
-  //   return await this.trx_logService.create(createTrx_Log);
-  // }
 
   @Get('/ingresar')
   async login() {
@@ -37,30 +32,4 @@ export class Trx_LogController {
     }
   }
 
-  
-
-  // @Get('/id/:id')
-  // async findById(@Param('id') id: string) {
-  //   return await this.userService.findOne( id );
-  // }
-
-  // // @Get(':id')
-  // // findOne(@Param('id') id: string) {
-  // //   return this.userService.findOne(+id);
-  // // }
-
-  // @Get('/poblateUsers')
-  // async poblate() {
-  //   return await this.userService.poblateBBDD();
-  // }
-
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-  //   return this.userService.update(+id, updateUserDto);
-  // }
-
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.userService.remove(+id);
-  // }
 }

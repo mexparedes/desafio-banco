@@ -84,7 +84,7 @@
         const RutCliente = $("#rut").val();
         const MontoDelCredito = Number($("#monto").val());
         const NumeroCuotas = Number($("#cuotas").val());
-        if(RutCliente===""){
+        if(RutCliente===''){
           alert("Ingrese un valor para rut")
           location.reload();
         }
@@ -95,7 +95,7 @@
         const response = await fetch("http://localhost:3000/TRX_LOG/calcularCreditoConsumo", {
           method: "POST",
           body: JSON.stringify({
-            RutCliente: RutCliente.replace('-',''),
+            RutCliente: Number(RutCliente.replace('-','')),
             MontoDelCredito,
             NumeroCuotas,
           }),

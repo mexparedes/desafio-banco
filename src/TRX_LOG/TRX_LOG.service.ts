@@ -1,5 +1,4 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { format } from 'utils/currency';
 import { CreditConsultingDto } from './dto/create-creditConsulting';
 const axios = require('axios')
 import { CreateTrx_LogDto } from './dto/create-TRX_LOG.dto';
@@ -30,9 +29,8 @@ export class Trx_LogService {
       })
       console.log(Trx_Log)
       await this.trx_logRepository.create(  {...Trx_Log}  );
-      //Valor Cuota = (monto crédito / cuotas) * tasa
       return cuotaValue;
-      //
+    
     } catch (error) {
       throw error
     }
@@ -49,7 +47,7 @@ export class Trx_LogService {
     }
   }
   async validateData( creditConsultingDto: CreditConsultingDto) {
-    if( creditConsultingDto.RutCliente === '' || creditConsultingDto.MontoDelCredito === 0 || creditConsultingDto.NumeroCuotas === 0){
+    if( creditConsultingDto.RutCliente === 0 || creditConsultingDto.MontoDelCredito === 0 || creditConsultingDto.NumeroCuotas === 0){
       throw new Error("Missing Data")
     }
     return;

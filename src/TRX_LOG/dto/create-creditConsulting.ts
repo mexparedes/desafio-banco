@@ -1,6 +1,6 @@
 export class CreditConsultingDto {
     
-    RutCliente: string;
+    RutCliente: number;
     MontoDelCredito: number;
     NumeroCuotas: number;
 }

@@ -35,17 +35,20 @@ $ npm install
 ## Para correr la aplicación
 
 ```bash
-# Se debe correr un Make File encargado de armar la build en docker compose y entregar .env
-# Importante mencionar que al momento de crear la imagen docker de postgres, este carga
-#automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
+
+Se debe correr un Make File encargado de armar la build en docker compose y entregar .env
+Importante mencionar que al momento de crear la imagen docker de postgres, este carga
+automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
+
 $ make up
 
-# En caso de querer detener el servicio,para bajar la api y borrar persistencia de datos en volumes
+En caso de querer detener el servicio,para bajar la api y borrar persistencia de datos en volumes
+
 $ make down
 ```
 ## Para iniciar el flujo de simulación de credito
 ```
-## En la raiz del proyecto hay 2 archivos (login.html y index.html)
+##En la raiz del proyecto hay 2 archivos (login.html y index.html)
 #La primera vista es login.html que se encarga de consultar la URL entregada en el desafio
 #La segunda vista es index.html en donde hay un pequeño formulario destinado a hacer la simulacion
 ```

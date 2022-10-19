@@ -1,0 +1,52 @@
+version: '3.7'
+
+networks:                        
+  ripley_network:                 
+
+services:
+  ripley:
+    container_name: ripley
+    build:
+      context: . 
+      dockerfile: Dockerfile
+      target: base
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${PORT}
+      DB_PORT: ${DB_PORT} 
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}  
+    volumes:
+      - ./:/app 
+    command: npm run start:dev
+    depends_on:
+      - ripley-db
+    networks:                             
+      - ripley_network                    
+
+
+  ripley-db:
+    container_name: ripley-db
+    image: postgres:12.5-alpine
+    volumes:
+      - psql-db-data:/var/lib/postgresql/data
+      - ./logTable.sql:/docker-entrypoint-initdb.d/logTable.sql
+    env_file:
+      - .env
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - 8991:${DB_PORT}
+    restart: on-failure
+    networks:
+      - ripley_network
+volumes:
+  psql-db-data:

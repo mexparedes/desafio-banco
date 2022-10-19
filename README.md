@@ -26,13 +26,13 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Instalación
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Para correr la aplicación
 
 ```bash
 # Se debe correr un Make File encargado de armar la build en docker compose y entregar .env
@@ -40,8 +40,12 @@ $ npm install
 #automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
 $ make up
 
-# para bajar la api y borrar persistencia de datos en volumes
+# En caso de querer detener el servicio,para bajar la api y borrar persistencia de datos en volumes
 $ make down
+
+# En la raiz del proyecto hay 2 archivos (login.html y index.html)
+#La primera vista es login.html que se encarga de consultar la URL entregada en el desafio
+#La segunda vista es index.html en donde hay un pequeño formulario destinado a hacer la simulacion
 
 #Una vez corriendo la api se puede ingresar al contenedor docker para monitorear la BBDD
 $ docker exec -it ripley-db bash

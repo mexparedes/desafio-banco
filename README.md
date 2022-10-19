@@ -51,7 +51,7 @@ $ make down
 ## Para iniciar el flujo de simulación de credito
 ```
 En la raiz del proyecto hay 2 archivos (login.html y index.html).
-La primera vista es login.htm, que luego de hacer click en ingresar se 
+La primera vista es login.html, que luego de hacer click en ingresar se 
 encarga de consultar el usuario de pruebas entregado en el desafio a través
 una integracion interna en la api, luego redirige automatimente a la segunda vista.
 La segunda vista es index.html en donde hay un pequeño formulario destinado a hacer la simulacion

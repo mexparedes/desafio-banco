@@ -42,16 +42,20 @@ $ make up
 
 # En caso de querer detener el servicio,para bajar la api y borrar persistencia de datos en volumes
 $ make down
-
-# En la raiz del proyecto hay 2 archivos (login.html y index.html)
+```
+## Para iniciar el flujo de simulación de credito
+```
+## En la raiz del proyecto hay 2 archivos (login.html y index.html)
 #La primera vista es login.html que se encarga de consultar la URL entregada en el desafio
 #La segunda vista es index.html en donde hay un pequeño formulario destinado a hacer la simulacion
-
+```
+## Nota adicional
+```
 #Una vez corriendo la api se puede ingresar al contenedor docker para monitorear la BBDD
 $ docker exec -it ripley-db bash
 #Luego ingresamos a la base de datos mediante consola psql y le proporcionamos el usuario 
 $ psql banco-ripley -U maximiliano
-
+```
 
 
 ## Support

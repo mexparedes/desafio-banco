@@ -40,10 +40,12 @@ Se debe correr un Make File encargado de armar la build en docker compose y entr
 Importante mencionar que al momento de crear la imagen docker de postgres, este carga
 automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
 
+Para levantar la aplicación:
 $ make up
 
 En caso de querer detener el servicio,para bajar la api y borrar persistencia de datos en volumes
 
+Para detener la aplicación:
 $ make down
 ```
 ## Para iniciar el flujo de simulación de credito

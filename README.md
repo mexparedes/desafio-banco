@@ -52,6 +52,7 @@ $ make down
 ```
 ##En la raiz del proyecto hay 2 archivos (login.html y index.html)
 #La primera vista es login.html que se encarga de consultar la URL entregada en el desafio
+#Luego de hacer click en ingresar, redirige automatimente a la segunda vista
 #La segunda vista es index.html en donde hay un pequeño formulario destinado a hacer la simulacion
 ```
 ## Nota adicional

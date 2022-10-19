@@ -36,7 +36,8 @@ $ npm install
 
 ```bash
 # Se debe correr un Make File encargado de armar la build en docker compose y entregar .env
-# Importante mencionar que al momento de crear la imagen docker de postgres, este carga automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
+# Importante mencionar que al momento de crear la imagen docker de postgres, este carga
+#automaticamente el .sql file que ha sido previamente guardado en un volume de docker.
 $ make up
 
 # para bajar la api y borrar persistencia de datos en volumes
